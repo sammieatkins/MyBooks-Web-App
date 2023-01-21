@@ -1,3 +1,4 @@
 - Bug with "undefined" genre on first submit no matter what.
 - How to make filler text go away when box is clicked in text area
 - Customize alert box with jQuery?
+- How do I handle the differences with the README.md? Create React App already has one...
