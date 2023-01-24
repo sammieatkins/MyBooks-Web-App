@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Quicksand&display=swap');
+
+.App {
+    text-align: center;
+    background-color: #F8E9FE;
+}
+.logo {
+width: 15%;
+}
+header {
+    background: #715FD6;
+}
+nav {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+nav a {
+    text-decoration: none;
+    font-family: 'Coiny', cursive;
+    color: #F8E9FE;
+    padding: 10px 20px;
+    font-size: 1.8em;
+}
+nav a:hover {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #715FD6;
+    background-color: #F8E9FE;
+}

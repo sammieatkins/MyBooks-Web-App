@@ -33,31 +33,34 @@ class NewBookForm extends React.Component {
     
       render() {
         return (
-          <div>
-            <h1>Enter a New Book</h1>
+          <div id="newBookPage">
+            <h1 id="enterNewBook">Enter a New Book</h1>
             <form onSubmit={this.handleSubmit}>
                 <label>
-                    Title *: 
+                    Title* : 
+                </label>
                     <input
                         name="title"
                         type="text"
                         value={this.state.title}
                         onChange={this.handleChange} 
+                        required
                     />
-                </label>
                 <label>
-                    Author *: 
+                    Author* : 
+                </label>
                     <input
                         name="author" 
                         type="text" 
                         value={this.state.author} 
                         onChange={this.handleChange} 
+                        required
                     />
-                </label>
                 <label>
-                    Genre *:
-                        <select name="genre" value={this.state.genre} onChange={this.handleChange}>
-                            <option value="Fantasy">Fantasy</option>
+                    Genre* :
+                </label>
+                        <select name="genre" value={this.state.genre} onChange={this.handleChange} required>
+                            <option value="Fantasy" selected>Fantasy</option>
                             <option value="Science Fiction">Science Fiction</option>
                             <option value="Dystopian">Dystopian</option>
                             <option value="Mystery">Mystery</option>
@@ -70,23 +73,25 @@ class NewBookForm extends React.Component {
                             <option value="Self-help">Self-help</option>
                             <option value="Biography">Biography</option>
                         </select>
-                </label>
                 <label>
-                    Rating:
-                        <select name="rating" value={this.state.rating} onChange={this.handleChange}>
+                    Rating* :
+                </label>
+                        <select name="rating" value={this.state.rating} onChange={this.handleChange} required>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-                </label>
                 <label>
                     Other comments:
-                    <textarea name="comments" value={this.state.comments} onChange={this.handleChange} />
                 </label>
+                    <textarea name="comments" value={this.state.comments} onChange={this.handleChange}/>
                 <input type="submit" value="Submit" id="submit" />
             </form>
+            <div id="bookEntered">
+                
+            </div>
           </div>
         );
       }  

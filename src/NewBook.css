@@ -1,12 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Quicksand&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+#newBookPage {
+    background-color: #F8E9FE;
+}
+#enterNewBook {
+    font-family: 'Coiny', cursive;
+    color: #715FD6;
+}
 label {
     padding-right: 5px;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #715FD6;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 auto;
 }
 input {
-
+    margin-bottom: 10px;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 5px;
 }
-label, input {
-
+form input:required {
+    border: #FFA8DB solid 2px;
+}
+form input:required:valid {
+    border: #715FD6 solid 2px;
+}
+select {
+    margin-bottom: 10px;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 5px;
+    height: 40px;
+    padding: 5px;
+    border: #715FD6 solid 2px;
+}
+textarea {
+    height: 70px;
+    margin-bottom: 10px;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 5px;
+    padding: 5px;
+    border: #715FD6 solid 2px;
 }
 #submit {
-
+    border: none;
+    background-color: #715FD6;
+    color: white;
+    border-radius: 10px;
+    width: 30%;
+    padding: 7px 20px;
+    font-size: 1.2em;
+    margin: 0 auto;
+    font-family: 'Coiny', cursive;
+    margin-bottom: 40px;
 }
