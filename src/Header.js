@@ -16,4 +16,7 @@ function MakeHeader() {
     )
 }
 
+const domContainer = document.querySelector('#header');
+const root = ReactDOM.createRoot(domContainer);
+root.render(MakeHeader);
 export default MakeHeader
