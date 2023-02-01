@@ -28,6 +28,7 @@ input {
     border-radius: 5px;
     height: 40px;
     padding: 0 5px;
+    font-family: 'Quicksand', sans-serif;
 }
 form input:required {
     border: #FFA8DB solid 2px;
@@ -42,6 +43,14 @@ select {
     height: 40px;
     padding: 5px;
     border: #715FD6 solid 2px;
+}
+form select:required {
+    border: #FFA8DB solid 2px;
+    color: #757575;
+}
+form select:required:valid {
+    border: #715FD6 solid 2px;
+    color: black;
 }
 textarea {
     height: 70px;

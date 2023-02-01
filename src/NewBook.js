@@ -4,9 +4,7 @@ import './NewBook.css';
 class NewBookForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {value: ''};
-        this.state.comments = 'Enter other comments here';
-    
+        this.state = {value: ''};    
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
@@ -43,24 +41,27 @@ class NewBookForm extends React.Component {
                         name="title"
                         type="text"
                         value={this.state.title}
-                        onChange={this.handleChange} 
+                        onChange={this.handleChange}
+                        placeholder="Enter title of your book here"
                         required
                     />
                 <label>
                     Author* : 
                 </label>
                     <input
-                        name="author" 
-                        type="text" 
-                        value={this.state.author} 
-                        onChange={this.handleChange} 
+                        name="author"
+                        type="text"
+                        value={this.state.author}
+                        onChange={this.handleChange}
+                        placeholder="Enter title of your book here"
                         required
                     />
                 <label>
                     Genre* :
                 </label>
                         <select name="genre" value={this.state.genre} onChange={this.handleChange} required>
-                            <option value="Fantasy" selected>Fantasy</option>
+                            <option value="" selected>Pick a genre</option>
+                            <option value="Fantasy">Fantasy</option>
                             <option value="Science Fiction">Science Fiction</option>
                             <option value="Dystopian">Dystopian</option>
                             <option value="Mystery">Mystery</option>
@@ -77,6 +78,7 @@ class NewBookForm extends React.Component {
                     Rating* :
                 </label>
                         <select name="rating" value={this.state.rating} onChange={this.handleChange} required>
+                            <option value="">Rate the book on a scale of 1 to 5</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -86,7 +88,7 @@ class NewBookForm extends React.Component {
                 <label>
                     Other comments:
                 </label>
-                    <textarea name="comments" value={this.state.comments} onChange={this.handleChange}/>
+                    <textarea name="comments" value={this.state.comments} onChange={this.handleChange} placeholder="Enter other comments here"/>
                 <input type="submit" value="Submit" id="submit" />
             </form>
             <div id="bookEntered">
